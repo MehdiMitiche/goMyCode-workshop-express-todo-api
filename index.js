@@ -27,7 +27,6 @@ app.use(bodyParser.json());
 //Handeling our endpoints
 app.get("/todos", (req, res) => {
   try {
-    console.log(req.moh.map((i = i)));
     const data = Todo.find().then((data, err) => {
       if (err) return res.status(400).json({ message: "Error" });
       return res.status(200).json({ data });
